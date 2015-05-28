@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Cumulus Workbench{% endblock %}
+
+{% block page_content %}
+
+<img src="{{ url_for('static', filename='wbench.png') }}" usemap="#switchmap">
+<map name="switchmap">
+    <area shape="rect" coords="69,226,181,257" href="leaf1">
+    <area shape="rect" coords="421,226,534,257" href="leaf2">
+</map><br>
+<a href="leaf1">Click to connect to leaf1</a><br>
+<a href="leaf2">Click to connect to leaf2</a><br>
+{% endblock %}
